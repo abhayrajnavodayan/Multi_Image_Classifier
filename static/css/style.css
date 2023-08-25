@@ -1,0 +1,74 @@
+body {
+    background-color: #586473;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    /* text-align: center; */
+    max-width: 500px; /* Increase the container width */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: none;
+    margin-top: 20px;
+}
+
+p {
+    font-family: Courier;
+}
+
+h1 {
+    font-size: 36px; /* Increased font size */
+    margin-bottom: 10px;
+    color: white; /* Changed text color to white */
+    font-weight: bold;
+}
+
+.footer-text {
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+.footer-text::after {
+    content: "developed by Abhay Raj";
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 12px;
+}
+
+.file-input {
+    text-align: center;
+    display: flex;
+    flex-direction: row; /* Place the file input and upload button in a row */
+    justify-content: space-between; /* Add space between the elements */
+    align-items: center; /* Align elements vertically */
+    margin-bottom: 20px; /* Add spacing between sections */
+    margin-left: 0;
+}
+
+/* Style the "Upload" and "Proceed" buttons */
+.upload-button, .proceed-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Adjust the width of the input field */
+.link-form-input {
+    flex-grow: 1; /* Expand the input field to take remaining space */
+    margin-right: 10px; /* Add space between the input field and the button */
+}
