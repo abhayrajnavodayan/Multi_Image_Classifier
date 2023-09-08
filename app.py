@@ -56,7 +56,13 @@ def home():
 @app.route('/success' , methods = ['GET' , 'POST'])
 def success():
     error = ''
-    target_img = os.path.join(os.getcwd() , 'static/images')
+    # Specify the target directory
+    target_dir = './static/images'
+
+    # Create the directory if it doesn't exist
+    os.makedirs(target_dir, exist_ok=True)
+
+    target_img = os.path.join(os.getcwd(), './static/images')
     if request.method == 'POST':
         if(request.form):
             link = request.form.get('link')
@@ -121,6 +127,6 @@ def success():
         return render_template('index.html')
 
 if __name__ == "__main__":
-    app.run(debug = True)
+    app.run(host='0.0.0.0', debug=True)
 
 
